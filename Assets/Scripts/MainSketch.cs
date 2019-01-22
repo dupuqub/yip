@@ -32,10 +32,7 @@ public class MainSketch : MonoBehaviour
     if(Input.GetAxis("PADX") != 0
     || Input.GetAxis("PADY") != 0)
     {
-      string current = EventSystem.current.ToString();
-      int index = current.IndexOf("(UnityEngine.GameObject)");
-
-      if(index == -1)
+      if(EventSystem.current.currentSelectedGameObject == null)
       {
         GameObject settings = GameObject.Find("SettingsButton");
         EventSystem.current.SetSelectedGameObject(settings);
