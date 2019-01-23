@@ -30,9 +30,9 @@ public class MainMain : MonoBehaviour
     GameObject current = EventSystem.current.currentSelectedGameObject;
 
     // Gamepad and keyboard behaviour.
-    if(currentDelay > 0) currentDelay --;
-
-    else if(navigating)
+    if(!navigating) currentDelay = 0;
+    else if(currentDelay > 0) currentDelay --;
+    else
     {
       currentDelay = delay;
 
