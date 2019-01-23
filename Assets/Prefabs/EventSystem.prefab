@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2810392989945821750}
   - component: {fileID: 2951853822454332101}
   - component: {fileID: 6290153191129906069}
+  - component: {fileID: 4529632845723140712}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -63,6 +64,25 @@ MonoBehaviour:
   m_VerticalAxis: PADY
   m_SubmitButton: A
   m_CancelButton: B
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 1
+--- !u!114 &4529632845723140712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820236921962676005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: KEYX
+  m_VerticalAxis: KEYY
+  m_SubmitButton: SUBMIT
+  m_CancelButton: CANCEL
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
