@@ -36,11 +36,8 @@ public class MainMain : MonoBehaviour
     {
       currentDelay = delay;
 
-      if(current == null
-      || current.name == "First")
-      {
-        Tools.UISelect("Settings");
-      }
+      //........................................................................
+      if(current == null) Tools.UISelect("Settings");
 
       //........................................................................
       else if(current.name == "Settings")
