@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -534,7 +534,7 @@ PrefabInstance:
     - target: {fileID: 1288995737532692077, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
       propertyPath: m_Name
-      value: AccountBox3
+      value: Account3
       objectReference: {fileID: 0}
     - target: {fileID: 1288995737532692076, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 549179049}
   - component: {fileID: 549179048}
   m_Layer: 5
-  m_Name: QuestionBox
+  m_Name: Question
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1001,7 +1001,7 @@ PrefabInstance:
     - target: {fileID: 1288995737532692077, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
       propertyPath: m_Name
-      value: AccountBox1
+      value: Account1
       objectReference: {fileID: 0}
     - target: {fileID: 1288995737532692076, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 1812456902}
   - component: {fileID: 1812456901}
   m_Layer: 5
-  m_Name: TitleBox
+  m_Name: PinkBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1579,7 +1579,7 @@ PrefabInstance:
     - target: {fileID: 1288995737532692077, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
       propertyPath: m_Name
-      value: AccountBox2
+      value: Account2
       objectReference: {fileID: 0}
     - target: {fileID: 1288995737532692076, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
@@ -1853,7 +1853,7 @@ PrefabInstance:
     - target: {fileID: 1288995737532692077, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
       propertyPath: m_Name
-      value: AccountBox0
+      value: Account0
       objectReference: {fileID: 0}
     - target: {fileID: 1288995737532692076, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
