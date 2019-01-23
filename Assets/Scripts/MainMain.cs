@@ -8,13 +8,14 @@ using UnityEngine.EventSystems;
 public class MainMain : MonoBehaviour
 {
   // "Input Field" breaks Unity's UI navigation's flow.
-  // Every scene containing "Input Field" must therefore have custom UI navigation.
+  // Every scene with "Input Field" must therefore have custom UI navigation.
 
   int delay = 20;
   int currentDelay = 0;
 
   void Update()
   {
+    // Navigation.
     float PADX = Input.GetAxis("PADX");
     float PADY = Input.GetAxis("PADY");
     float KEYX = Input.GetAxis("KEYX");
@@ -28,40 +29,57 @@ public class MainMain : MonoBehaviour
     bool UP = PADY > 0 || KEYY > 0;
 
     bool navigating = PADX != 0 || PADY != 0 || KEYY != 0 || KEYX != 0;
+    bool mousing = MOUSEX != 0 || MOUSEY != 0;
+
     GameObject current = EventSystem.current.currentSelectedGameObject;
 
-    if(MOUSEX != 0 || MOUSEY != 0) Tools.UISelect("First");
+    // Mouse behaviour.
+    if(mousing)
+    {
+      if(current == null
+      || current.name.Substring(0, 5) != "Input")
+      {
+        Tools.UISelect("First");
+      }
+    }
 
+    // Gamepad and keyboard behaviour.
     if(currentDelay > 0) currentDelay --;
 
     else if(navigating)
     {
-      if(current.name == "First")
+      currentDelay = delay;
+
+      if(current == null
+      || current.name == "First")
       {
-        currentDelay = delay;
         Tools.UISelect("Settings");
       }
+
+      //........................................................................
       else if(current.name == "Settings")
       {
-        currentDelay = delay;
-        if(RIGHT) Tools.UISelect("Input0");
-        if(DOWN) Tools.UISelect("Credits");
-        if(UP) Tools.UISelect("Exit");
+             if(RIGHT) Tools.UISelect("Input0");
+        else if(DOWN) Tools.UISelect("Credits");
+        else if(UP) Tools.UISelect("Exit");
       }
+
+      //........................................................................
       else if(current.name == "Credits")
       {
-        currentDelay = delay;
-        if(RIGHT) Tools.UISelect("Input0");
-        if(DOWN) Tools.UISelect("Exit");
-        if(UP) Tools.UISelect("Settings");
+             if(RIGHT) Tools.UISelect("Input0");
+        else if(DOWN) Tools.UISelect("Exit");
+        else if(UP) Tools.UISelect("Settings");
       }
+
       else if(current.name == "Exit")
       {
-        currentDelay = delay;
-        if(RIGHT) Tools.UISelect("Input0");
-        if(DOWN) Tools.UISelect("Settings");
-        if(UP) Tools.UISelect("Credits");
+             if(RIGHT) Tools.UISelect("Input0");
+        else if(DOWN) Tools.UISelect("Settings");
+        else if(UP) Tools.UISelect("Credits");
       }
+
+      //........................................................................
       else if(current.name.Substring(0, 5) == "Input")
       {
         string index = current.name.Substring(current.name.Length - 1);
@@ -69,12 +87,13 @@ public class MainMain : MonoBehaviour
         int indexDown = indexInt + 1 > 3 ? 0 : indexInt + 1;
         int indexUp = indexInt - 1 < 0 ? 3 : indexInt - 1;
 
-        currentDelay = delay;
-        if(LEFT) Tools.UISelect("Settings");
-        if(RIGHT) Tools.UISelect("Play" + index);
-        if(DOWN) Tools.UISelect("Input" + indexDown.ToString());
-        if(UP) Tools.UISelect("Input" + indexUp.ToString());
+             if(LEFT) Tools.UISelect("Settings");
+        else if(RIGHT) Tools.UISelect("Play" + index);
+        else if(DOWN) Tools.UISelect("Input" + indexDown.ToString());
+        else if(UP) Tools.UISelect("Input" + indexUp.ToString());
       }
+
+      //........................................................................
       else if(current.name.Substring(0, 4) == "Play")
       {
         string index = current.name.Substring(current.name.Length - 1);
@@ -82,12 +101,13 @@ public class MainMain : MonoBehaviour
         int indexDown = indexInt + 1 > 3 ? 0 : indexInt + 1;
         int indexUp = indexInt - 1 < 0 ? 3 : indexInt - 1;
 
-        currentDelay = delay;
-        if(LEFT) Tools.UISelect("Input" + index);
-        if(RIGHT) Tools.UISelect("Erase" + index);
-        if(DOWN) Tools.UISelect("Play" + indexDown.ToString());
-        if(UP) Tools.UISelect("Play" + indexUp.ToString());
+             if(LEFT) Tools.UISelect("Input" + index);
+        else if(RIGHT) Tools.UISelect("Erase" + index);
+        else if(DOWN) Tools.UISelect("Play" + indexDown.ToString());
+        else if(UP) Tools.UISelect("Play" + indexUp.ToString());
       }
+
+      //........................................................................
       else if(current.name.Substring(0, 5) == "Erase")
       {
         string index = current.name.Substring(current.name.Length - 1);
@@ -95,10 +115,9 @@ public class MainMain : MonoBehaviour
         int indexDown = indexInt + 1 > 3 ? 0 : indexInt + 1;
         int indexUp = indexInt - 1 < 0 ? 3 : indexInt - 1;
 
-        currentDelay = delay;
-        if(LEFT) Tools.UISelect("Play" + index);
-        if(DOWN) Tools.UISelect("Erase" + indexDown.ToString());
-        if(UP) Tools.UISelect("Erase" + indexUp.ToString());
+             if(LEFT) Tools.UISelect("Play" + index);
+        else if(DOWN) Tools.UISelect("Erase" + indexDown.ToString());
+        else if(UP) Tools.UISelect("Erase" + indexUp.ToString());
       }
     }
   }

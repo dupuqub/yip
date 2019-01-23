@@ -106,7 +106,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 1, g: 1, b: 1, a: 1}
   m_CustomCaretColor: 1
-  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
+  m_SelectionColor: {r: 0.8, g: 0.13333334, b: 0.33333334, a: 0.49803922}
   m_Text: 
   m_CaretBlinkRate: 1
   m_CaretWidth: 5
