@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2118,10 +2118,5 @@ PrefabInstance:
       propertyPath: m_FirstSelected
       value: 
       objectReference: {fileID: 1923203653}
-    - target: {fileID: 6290153191129906069, guid: 40a68b7828698774abeafce5e453c52b,
-        type: 3}
-      propertyPath: m_ForceModuleActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a68b7828698774abeafce5e453c52b, type: 3}

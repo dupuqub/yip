@@ -20,8 +20,6 @@ public class MainMain : MonoBehaviour
     float PADY = Input.GetAxis("PADY");
     float KEYX = Input.GetAxis("KEYX");
     float KEYY = Input.GetAxis("KEYY");
-    float MOUSEX = Input.GetAxis("MOUSEX");
-    float MOUSEY = Input.GetAxis("MOUSEY");
 
     bool LEFT = PADX < 0 || KEYX < 0;
     bool RIGHT = PADX > 0 || KEYX > 0;
@@ -29,19 +27,7 @@ public class MainMain : MonoBehaviour
     bool UP = PADY > 0 || KEYY > 0;
 
     bool navigating = PADX != 0 || PADY != 0 || KEYY != 0 || KEYX != 0;
-    bool mousing = MOUSEX != 0 || MOUSEY != 0;
-
     GameObject current = EventSystem.current.currentSelectedGameObject;
-
-    // Mouse behaviour.
-    if(mousing)
-    {
-      if(current == null
-      || current.name.Substring(0, 5) != "Input")
-      {
-        Tools.UISelect("First");
-      }
-    }
 
     // Gamepad and keyboard behaviour.
     if(currentDelay > 0) currentDelay --;
