@@ -7,11 +7,8 @@ public class Slide : MonoBehaviour
   public int start;
   public int delay;
 
-  int currentDelay = 0;
-
+  int currentDelay;
   Vector3 origin;
-  Vector3 oldPos;
-  Vector3 newPos;
 
   void Start()
   {
@@ -23,14 +20,9 @@ public class Slide : MonoBehaviour
   void FixedUpdate()
   {
     if(currentDelay > 0) currentDelay --;
-    else
-    {
-      newPos = origin;
-      oldPos = transform.localPosition;
-      transform.localPosition = Vector3.Lerp(oldPos, newPos, 0.1f);
-    }
+    else transform.localPosition = Vector3.Lerp(transform.localPosition, origin, 0.1f);
 
-    if(transform.localPosition.x + 1f > origin.x
-    && transform.localPosition.x - 1f < origin.x) Destroy(this, 0);
+    if(transform.localPosition.x + 0.1f > origin.x
+    && transform.localPosition.x - 0.1f < origin.x) Destroy(this);
   }
 }
