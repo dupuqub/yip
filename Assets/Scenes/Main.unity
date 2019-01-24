@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 25
+  delay: 55
   start: -1300
   end: -652
 --- !u!1 &243535228
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 30
+  delay: 60
   start: -1300
   end: -690
 --- !u!1001 &460247661
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 40
+  delay: 70
   start: 1400
   end: 528
 --- !u!1 &627362003 stripped
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 85
+  delay: 105
   start: 1500
   end: 365
 --- !u!1001 &668738177
@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 80
+  delay: 100
   start: 1500
   end: 470
 --- !u!1 &1343704641
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 20
+  delay: 50
   start: -1300
   end: -615
 --- !u!1 &1484051107 stripped
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 95
+  delay: 115
   start: 1500
   end: 155
 --- !u!1001 &1513219645
@@ -1324,7 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
+  delay: 20
   start: -1300
   end: -500
 --- !u!1 &1812456899
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
+  delay: 10
   start: -1710
   end: -202
 --- !u!1 &1817716121
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2020196719889e24fb8d1568313212de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 90
+  delay: 110
   start: 1500
   end: 260
 --- !u!1 &1933922266
