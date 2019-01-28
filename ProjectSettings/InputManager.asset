@@ -70,8 +70,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: PADX
-    descriptiveName: 
+    m_Name: ARROWX
+    descriptiveName: Gamepad copy.
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -86,8 +86,8 @@ InputManager:
     axis: 5
     joyNum: 0
   - serializedVersion: 3
-    m_Name: PADY
-    descriptiveName: 
+    m_Name: ARROWY
+    descriptiveName: Gamepad copy.
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -135,7 +135,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: BACK
-    descriptiveName: 
+    descriptiveName: Gamepad copy.
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 6
@@ -151,7 +151,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: START
-    descriptiveName: 
+    descriptiveName: Gamepad copy.
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 7
@@ -326,8 +326,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: PADX
-    descriptiveName: 
+    m_Name: ARROWX
+    descriptiveName: Keyboard copy.
     descriptiveNegativeName: 
     negativeButton: left
     positiveButton: right
@@ -342,8 +342,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: PADY
-    descriptiveName: 
+    m_Name: ARROWY
+    descriptiveName: Keyboard copy.
     descriptiveNegativeName: 
     negativeButton: down
     positiveButton: up
@@ -359,7 +359,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: BACK
-    descriptiveName: 
+    descriptiveName: Keyboard copy.
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: escape
@@ -375,7 +375,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: START
-    descriptiveName: 
+    descriptiveName: Keyboard copy.
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: return

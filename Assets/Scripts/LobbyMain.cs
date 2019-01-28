@@ -61,17 +61,17 @@ public class LobbyMain : MonoBehaviour
 
     float MOUSEX = Input.GetAxis("MOUSEX");
     float MOUSEY = Input.GetAxis("MOUSEY");
-    float PADX = Input.GetAxis("PADX");
-    float PADY = Input.GetAxis("PADY");
+    float ARROWX = Input.GetAxis("ARROWX");
+    float ARROWY = Input.GetAxis("ARROWY");
 
-    bool LEFT = PADX < 0;
-    bool RIGHT = PADX > 0;
-    bool DOWN = PADY < 0;
-    bool UP = PADY > 0;
+    bool LEFT = ARROWX < 0;
+    bool RIGHT = ARROWX > 0;
+    bool DOWN = ARROWY < 0;
+    bool UP = ARROWY > 0;
 
     GameObject current = EventSystem.current.currentSelectedGameObject;
     bool inputing = current && current.name.Length > 5 && current.name.Substring(0, 5) == "Input";
-    bool navigating = PADX != 0 || PADY != 0;
+    bool navigating = ARROWX != 0 || ARROWY != 0;
     bool mousing = MOUSEX != 0 || MOUSEY != 0;
 
          if(mousing && !inputing) EventSystem.current.SetSelectedGameObject(null);
