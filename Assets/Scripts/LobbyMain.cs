@@ -61,6 +61,8 @@ public class LobbyMain : MonoBehaviour
 
     float PADX = Input.GetAxis("PADX");
     float PADY = Input.GetAxis("PADY");
+    float MOUSEX = Input.GetAxis("MOUSEX");
+    float MOUSEY = Input.GetAxis("MOUSEY");
 
     bool LEFT = PADX < 0;
     bool RIGHT = PADX > 0;
@@ -68,10 +70,13 @@ public class LobbyMain : MonoBehaviour
     bool UP = PADY > 0;
 
     bool navigating = PADX != 0 || PADY != 0;
+    bool mousing = MOUSEX != 0 || MOUSEY != 0;
     GameObject current = EventSystem.current.currentSelectedGameObject;
 
-    // Gamepad and keyboard behaviour.
-    if(!navigating) currentDelay = 0;
+         if(mousing) EventSystem.current.SetSelectedGameObject(null);
+    else if(navigating) Tools.ClearHover();
+
+         if(!navigating) currentDelay = 0;
     else if(currentDelay > 0) currentDelay --;
     else
     {
