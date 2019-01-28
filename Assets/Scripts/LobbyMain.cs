@@ -10,20 +10,20 @@ public class LobbyMain : MonoBehaviour
   void Start()
   {
     string _CommonJson = Tools.GetFile("/Sources/_Common.json");
-    Serials._Common _CommonSnap = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+    Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
-    string LangJson = Tools.GetFile($"/Langs/{_CommonSnap.lang}/Lobby.json");
-    Serials.LobbyLang LangSnap = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
+    string LangJson = Tools.GetFile($"/Langs/{_Common.lang}/Lobby.json");
+    Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     Text question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
     Text settings = GameObject.Find("Settings").transform.GetChild(0).GetComponent<Text>();
     Text credits = GameObject.Find("Credits").transform.GetChild(0).GetComponent<Text>();
     Text exit = GameObject.Find("Exit").transform.GetChild(0).GetComponent<Text>();
 
-    question.text = LangSnap.question;
-    settings.text = LangSnap.settings;
-    credits.text = LangSnap.credits;
-    exit.text = LangSnap.exit;
+    question.text = Lang.question;
+    settings.text = Lang.settings;
+    credits.text = Lang.credits;
+    exit.text = Lang.exit;
 
     for(int index = 0; index < 4; index ++)
     {
@@ -32,7 +32,6 @@ public class LobbyMain : MonoBehaviour
       InputField field = input.GetComponent<InputField>();
       Text placeholder = field.placeholder.GetComponent<Text>();
       Text last = save.transform.Find("Last").gameObject.GetComponent<Text>();
-
       bool exists = Tools.DirExists($"/Saves/Save{index}");
 
       if(exists)
@@ -42,11 +41,11 @@ public class LobbyMain : MonoBehaviour
 
         placeholder.text = SaveMain.name;
         placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
-        last.text = $"{LangSnap.lastLogin} - {SaveMain.lastLogin}";
+        last.text = $"{Lang.lastLogin} - {SaveMain.lastLogin}";
       }
       else
       {
-        placeholder.text = LangSnap.newPlayer;
+        placeholder.text = Lang.newPlayer;
         last.text = "";
       }
     }
