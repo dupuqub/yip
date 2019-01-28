@@ -10,11 +10,12 @@ public class Serials
   [System.Serializable]
   public class LobbyLang
   {
+    public string id;
+    public string name;
     public string lastLogin;
     public string newPlayer;
     public string question;
     public string settings;
-    public string credits;
     public string exit;
   }
 

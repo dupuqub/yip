@@ -8,6 +8,12 @@ using UnityEngine.EventSystems;
 public class Tools
 {
   //....................................................................................................................
+  public static string Title(string word)
+  {
+    return $"{word.Substring(0, 1).ToUpper()}{word.Substring(1)}";
+  }
+
+  //....................................................................................................................
   public static bool DirExists(string address)
   {
     return Directory.Exists(Application.streamingAssetsPath + address);

@@ -1,8 +1,9 @@
 {
+  "id": "English",
+  "name": "English",
   "lastLogin": "last login",
   "newPlayer": "new player",
   "question": "Who are you?",
   "settings": "Settings",
-  "credits": "Credits",
   "exit": "Exit"
 }

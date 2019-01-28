@@ -1,8 +1,9 @@
 {
+  "id": "Portuguese",
+  "name": "Português",
   "lastLogin": "último acesso",
   "newPlayer": "novo jogador",
   "question": "Quem é você?",
   "settings": "Ajustes",
-  "credits": "Créditos",
   "exit": "Sair"
 }

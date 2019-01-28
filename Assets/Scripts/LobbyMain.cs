@@ -16,13 +16,13 @@ public class LobbyMain : MonoBehaviour
     Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     Text Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
+    Text Language = GameObject.Find("Language").transform.GetChild(0).GetComponent<Text>();
     Text Settings = GameObject.Find("Settings").transform.GetChild(0).GetComponent<Text>();
-    Text Credits = GameObject.Find("Credits").transform.GetChild(0).GetComponent<Text>();
     Text Exit = GameObject.Find("Exit").transform.GetChild(0).GetComponent<Text>();
 
     Question.text = Lang.question;
+    Language.text = $"{Lang.name}    <size=30px><color=#DDCCFF88><i>{Lang.id}</i></color></size>";
     Settings.text = Lang.settings;
-    Credits.text = Lang.credits;
     Exit.text = Lang.exit;
 
     for(int index = 0; index < 4; index ++)
