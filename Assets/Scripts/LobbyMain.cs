@@ -15,38 +15,39 @@ public class LobbyMain : MonoBehaviour
     string LangJson = Tools.GetFile($"/Langs/{_Common.lang}/Lobby.json");
     Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
-    Text question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
-    Text settings = GameObject.Find("Settings").transform.GetChild(0).GetComponent<Text>();
-    Text credits = GameObject.Find("Credits").transform.GetChild(0).GetComponent<Text>();
-    Text exit = GameObject.Find("Exit").transform.GetChild(0).GetComponent<Text>();
+    Text Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
+    Text Settings = GameObject.Find("Settings").transform.GetChild(0).GetComponent<Text>();
+    Text Credits = GameObject.Find("Credits").transform.GetChild(0).GetComponent<Text>();
+    Text Exit = GameObject.Find("Exit").transform.GetChild(0).GetComponent<Text>();
 
-    question.text = Lang.question;
-    settings.text = Lang.settings;
-    credits.text = Lang.credits;
-    exit.text = Lang.exit;
+    Question.text = Lang.question;
+    Settings.text = Lang.settings;
+    Credits.text = Lang.credits;
+    Exit.text = Lang.exit;
 
     for(int index = 0; index < 4; index ++)
     {
-      GameObject save = GameObject.Find($"Save{index}");
-      GameObject input = save.transform.Find($"Input{index}").gameObject;
-      InputField field = input.GetComponent<InputField>();
-      Text placeholder = field.placeholder.GetComponent<Text>();
-      Text last = save.transform.Find("Last").gameObject.GetComponent<Text>();
-      bool exists = Tools.DirExists($"/Saves/Save{index}");
+      GameObject Save = GameObject.Find($"Save{index}");
+      GameObject Input = Save.transform.Find($"Input{index}").gameObject;
+      InputField Field = Input.GetComponent<InputField>();
+      Text Placeholder = Field.placeholder.GetComponent<Text>();
+      Text Last = Save.transform.Find("Last").gameObject.GetComponent<Text>();
 
-      if(exists)
+      bool directoryExists = Tools.DirExists($"/Saves/Save{index}");
+
+      if(directoryExists)
       {
         string SaveMainJson = Tools.GetFile($"/Saves/Save{index}/Main.json");
         Serials.SaveMain SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
 
-        placeholder.text = SaveMain.name;
-        placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
-        last.text = $"{Lang.lastLogin} - {SaveMain.lastLogin}";
+        Placeholder.text = SaveMain.name;
+        Placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
+        Last.text = $"{Lang.lastLogin} - {SaveMain.lastLogin}";
       }
       else
       {
-        placeholder.text = Lang.newPlayer;
-        last.text = "";
+        Placeholder.text = Lang.newPlayer;
+        Last.text = "";
       }
     }
   }
@@ -70,8 +71,9 @@ public class LobbyMain : MonoBehaviour
     bool DOWN = ARROWY < 0;
     bool UP = ARROWY > 0;
 
-    GameObject current = EventSystem.current.currentSelectedGameObject;
-    bool inputing = current && current.name.Length > 5 && current.name.Substring(0, 5) == "Input";
+    GameObject Current = EventSystem.current.currentSelectedGameObject;
+
+    bool inputing = Current && Current.name.Length > 5 && Current.name.Substring(0, 5) == "Input";
     bool navigating = ARROWX != 0 || ARROWY != 0;
     bool mousing = MOUSEX != 0 || MOUSEY != 0;
 
