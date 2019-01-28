@@ -86,27 +86,27 @@ public class LobbyMain : MonoBehaviour
     {
       currentDelay = delay;
 
-      if(Current == null) Tools.UISelect("Settings");
+      if(Current == null) Tools.UISelect("Language");
+
+      else if(Current.name == "Language")
+      {
+             if(RIGHT) Tools.UISelect("Input0");
+        else if(DOWN) Tools.UISelect("Settings");
+        else if(UP) Tools.UISelect("Exit");
+      }
 
       else if(Current.name == "Settings")
       {
              if(RIGHT) Tools.UISelect("Input0");
-        else if(DOWN) Tools.UISelect("Credits");
-        else if(UP) Tools.UISelect("Exit");
-      }
-
-      else if(Current.name == "Credits")
-      {
-             if(RIGHT) Tools.UISelect("Input0");
         else if(DOWN) Tools.UISelect("Exit");
-        else if(UP) Tools.UISelect("Settings");
+        else if(UP) Tools.UISelect("Language");
       }
 
       else if(Current.name == "Exit")
       {
              if(RIGHT) Tools.UISelect("Input0");
-        else if(DOWN) Tools.UISelect("Settings");
-        else if(UP) Tools.UISelect("Credits");
+        else if(DOWN) Tools.UISelect("Language");
+        else if(UP) Tools.UISelect("Settings");
       }
 
       else if(Current.name.Substring(0, 5) == "Input")
@@ -116,7 +116,7 @@ public class LobbyMain : MonoBehaviour
         int indexDown = indexInt + 1 > 3 ? 0 : indexInt + 1;
         int indexUp = indexInt - 1 < 0 ? 3 : indexInt - 1;
 
-             if(LEFT) Tools.UISelect("Settings");
+             if(LEFT) Tools.UISelect("Language");
         else if(RIGHT) Tools.UISelect("Play" + index);
         else if(DOWN) Tools.UISelect("Input" + indexDown.ToString());
         else if(UP) Tools.UISelect("Input" + indexUp.ToString());
