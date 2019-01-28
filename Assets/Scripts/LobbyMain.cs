@@ -27,7 +27,6 @@ public class LobbyMain : MonoBehaviour
 
     for(int index = 0; index < 4; index ++)
     {
-
       GameObject account = GameObject.Find($"Account{index}");
       GameObject input = account.transform.Find($"Input{index}").gameObject;
       InputField field = input.GetComponent<InputField>();
@@ -62,15 +61,13 @@ public class LobbyMain : MonoBehaviour
 
     float PADX = Input.GetAxis("PADX");
     float PADY = Input.GetAxis("PADY");
-    float KEYX = Input.GetAxis("KEYX");
-    float KEYY = Input.GetAxis("KEYY");
 
-    bool LEFT = PADX < 0 || KEYX < 0;
-    bool RIGHT = PADX > 0 || KEYX > 0;
-    bool DOWN = PADY < 0 || KEYY < 0;
-    bool UP = PADY > 0 || KEYY > 0;
+    bool LEFT = PADX < 0;
+    bool RIGHT = PADX > 0;
+    bool DOWN = PADY < 0;
+    bool UP = PADY > 0;
 
-    bool navigating = PADX != 0 || PADY != 0 || KEYY != 0 || KEYX != 0;
+    bool navigating = PADX != 0 || PADY != 0;
     GameObject current = EventSystem.current.currentSelectedGameObject;
 
     // Gamepad and keyboard behaviour.
