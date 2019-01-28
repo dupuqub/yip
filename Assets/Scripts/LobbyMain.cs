@@ -86,32 +86,32 @@ public class LobbyMain : MonoBehaviour
     {
       currentDelay = delay;
 
-      if(current == null) Tools.UISelect("Settings");
+      if(Current == null) Tools.UISelect("Settings");
 
-      else if(current.name == "Settings")
+      else if(Current.name == "Settings")
       {
              if(RIGHT) Tools.UISelect("Input0");
         else if(DOWN) Tools.UISelect("Credits");
         else if(UP) Tools.UISelect("Exit");
       }
 
-      else if(current.name == "Credits")
+      else if(Current.name == "Credits")
       {
              if(RIGHT) Tools.UISelect("Input0");
         else if(DOWN) Tools.UISelect("Exit");
         else if(UP) Tools.UISelect("Settings");
       }
 
-      else if(current.name == "Exit")
+      else if(Current.name == "Exit")
       {
              if(RIGHT) Tools.UISelect("Input0");
         else if(DOWN) Tools.UISelect("Settings");
         else if(UP) Tools.UISelect("Credits");
       }
 
-      else if(current.name.Substring(0, 5) == "Input")
+      else if(Current.name.Substring(0, 5) == "Input")
       {
-        string index = current.name.Substring(current.name.Length - 1);
+        string index = Current.name.Substring(Current.name.Length - 1);
         int indexInt = Int32.Parse(index);
         int indexDown = indexInt + 1 > 3 ? 0 : indexInt + 1;
         int indexUp = indexInt - 1 < 0 ? 3 : indexInt - 1;
@@ -122,9 +122,9 @@ public class LobbyMain : MonoBehaviour
         else if(UP) Tools.UISelect("Input" + indexUp.ToString());
       }
 
-      else if(current.name.Substring(0, 4) == "Play")
+      else if(Current.name.Substring(0, 4) == "Play")
       {
-        string index = current.name.Substring(current.name.Length - 1);
+        string index = Current.name.Substring(Current.name.Length - 1);
         int indexInt = Int32.Parse(index);
         int indexDown = indexInt + 1 > 3 ? 0 : indexInt + 1;
         int indexUp = indexInt - 1 < 0 ? 3 : indexInt - 1;
@@ -135,9 +135,9 @@ public class LobbyMain : MonoBehaviour
         else if(UP) Tools.UISelect("Play" + indexUp.ToString());
       }
 
-      else if(current.name.Substring(0, 5) == "Erase")
+      else if(Current.name.Substring(0, 5) == "Erase")
       {
-        string index = current.name.Substring(current.name.Length - 1);
+        string index = Current.name.Substring(Current.name.Length - 1);
         int indexInt = Int32.Parse(index);
         int indexDown = indexInt + 1 > 3 ? 0 : indexInt + 1;
         int indexUp = indexInt - 1 < 0 ? 3 : indexInt - 1;
