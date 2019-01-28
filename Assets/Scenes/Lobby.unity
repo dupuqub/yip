@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 85499538}
   - component: {fileID: 85499537}
   - component: {fileID: 85499536}
+  - component: {fileID: 85499540}
   - component: {fileID: 85499539}
   m_Layer: 5
   m_Name: Settings
@@ -209,7 +210,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 85499537}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 85499534}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &85499537
@@ -264,6 +276,18 @@ MonoBehaviour:
   delay: 55
   start: -1300
   end: -652
+--- !u!114 &85499540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85499534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a47d0ce19945294c87904eee4f75285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &243535228
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +458,7 @@ GameObject:
   - component: {fileID: 363540972}
   - component: {fileID: 363540971}
   - component: {fileID: 363540970}
+  - component: {fileID: 363540974}
   - component: {fileID: 363540973}
   m_Layer: 5
   m_Name: Exit
@@ -501,7 +526,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 363540971}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 363540968}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &363540971
@@ -556,6 +592,18 @@ MonoBehaviour:
   delay: 60
   start: -1300
   end: -690
+--- !u!114 &363540974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363540968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a47d0ce19945294c87904eee4f75285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &549179046
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +832,7 @@ GameObject:
   - component: {fileID: 1343704645}
   - component: {fileID: 1343704644}
   - component: {fileID: 1343704643}
+  - component: {fileID: 1343704647}
   - component: {fileID: 1343704646}
   m_Layer: 5
   m_Name: Language
@@ -851,7 +900,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1343704644}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1343704647}
+        m_MethodName: ChangeLang
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1343704644
@@ -906,6 +966,18 @@ MonoBehaviour:
   delay: 50
   start: -1300
   end: -615
+--- !u!114 &1343704647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343704641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a47d0ce19945294c87904eee4f75285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1449901343
 PrefabInstance:
   m_ObjectHideFlags: 0

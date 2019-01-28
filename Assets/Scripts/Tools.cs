@@ -32,6 +32,12 @@ public class Tools
   }
 
   //....................................................................................................................
+  public static void SetFile(string address, string newSave)
+  {
+    File.WriteAllText(Application.streamingAssetsPath + address, newSave);
+  }
+
+  //....................................................................................................................
   public static void UISelect(string target)
   {
     EventSystem.current.SetSelectedGameObject(target == "" ? null : GameObject.Find(target));
