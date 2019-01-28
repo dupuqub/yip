@@ -19,7 +19,7 @@ public class Serials
   }
 
   [System.Serializable]
-  public class Account
+  public class SaveMain
   {
     public string name;
     public string lastLogin;

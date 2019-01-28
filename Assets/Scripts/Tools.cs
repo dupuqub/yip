@@ -8,6 +8,12 @@ using UnityEngine.EventSystems;
 public class Tools
 {
   //....................................................................................................................
+  public static bool DirExists(string address)
+  {
+    return Directory.Exists(Application.streamingAssetsPath + address);
+  }
+
+  //....................................................................................................................
   public static bool FileExists(string address)
   {
     return File.Exists(Application.streamingAssetsPath + address);

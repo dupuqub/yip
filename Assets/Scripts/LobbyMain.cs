@@ -27,23 +27,22 @@ public class LobbyMain : MonoBehaviour
 
     for(int index = 0; index < 4; index ++)
     {
-      GameObject account = GameObject.Find($"Account{index}");
-      GameObject input = account.transform.Find($"Input{index}").gameObject;
+      GameObject save = GameObject.Find($"Save{index}");
+      GameObject input = save.transform.Find($"Input{index}").gameObject;
       InputField field = input.GetComponent<InputField>();
       Text placeholder = field.placeholder.GetComponent<Text>();
-      Text last = account.transform.Find("Last").gameObject.GetComponent<Text>();
+      Text last = save.transform.Find("Last").gameObject.GetComponent<Text>();
 
-      string address = $"/Accounts/Account{index}.json";
-      bool exists = Tools.FileExists(address);
+      bool exists = Tools.DirExists($"/Saves/Save{index}");
 
       if(exists)
       {
-        string AccountJson = Tools.GetFile(address);
-        Serials.Account AccountSnap = JsonUtility.FromJson<Serials.Account>(AccountJson);
+        string SaveMainJson = Tools.GetFile($"/Saves/Save{index}/Main.json");
+        Serials.SaveMain SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
 
-        placeholder.text = AccountSnap.name;
+        placeholder.text = SaveMain.name;
         placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
-        last.text = $"{LangSnap.lastLogin} - {AccountSnap.lastLogin}";
+        last.text = $"{LangSnap.lastLogin} - {SaveMain.lastLogin}";
       }
       else
       {
