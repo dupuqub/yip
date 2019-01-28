@@ -18,4 +18,9 @@ public class Tools
   {
     EventSystem.current.SetSelectedGameObject(GameObject.Find(target));
   }
+
+  public static float C(int source)
+  {
+    return (float)source / 255;
+  }
 }
