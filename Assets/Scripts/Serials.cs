@@ -10,6 +10,7 @@ public class Serials
   [System.Serializable]
   public class LobbyLang
   {
+    public string lastLogin;
     public string newPlayer;
     public string question;
     public string settings;
@@ -21,5 +22,6 @@ public class Serials
   public class Account
   {
     public string name;
+    public string lastLogin;
   }
 }

@@ -31,21 +31,24 @@ public class LobbyMain : MonoBehaviour
       GameObject input = account.transform.Find($"Input{index}").gameObject;
       InputField field = input.GetComponent<InputField>();
       Text placeholder = field.placeholder.GetComponent<Text>();
+      Text last = account.transform.Find("Last").gameObject.GetComponent<Text>();
 
       string address = $"/Accounts/Account{index}.json";
-      bool fileExists = Tools.FileExists(address);
+      bool exists = Tools.FileExists(address);
 
-      if(fileExists)
+      if(exists)
       {
         string AccountJson = Tools.GetFile(address);
         Serials.Account AccountSnap = JsonUtility.FromJson<Serials.Account>(AccountJson);
 
         placeholder.text = AccountSnap.name;
         placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
+        last.text = $"{LangSnap.lastLogin} - {AccountSnap.lastLogin}";
       }
       else
       {
         placeholder.text = LangSnap.newPlayer;
+        last.text = "";
       }
     }
   }
