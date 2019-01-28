@@ -59,21 +59,22 @@ public class LobbyMain : MonoBehaviour
     // "Input Field" breaks Unity's UI navigation's flow.
     // Every scene with "Input Field" must therefore have custom UI navigation.
 
-    float PADX = Input.GetAxis("PADX");
-    float PADY = Input.GetAxis("PADY");
     float MOUSEX = Input.GetAxis("MOUSEX");
     float MOUSEY = Input.GetAxis("MOUSEY");
+    float PADX = Input.GetAxis("PADX");
+    float PADY = Input.GetAxis("PADY");
 
     bool LEFT = PADX < 0;
     bool RIGHT = PADX > 0;
     bool DOWN = PADY < 0;
     bool UP = PADY > 0;
 
+    GameObject current = EventSystem.current.currentSelectedGameObject;
+    bool inputing = current && current.name.Length > 5 && current.name.Substring(0, 5) == "Input";
     bool navigating = PADX != 0 || PADY != 0;
     bool mousing = MOUSEX != 0 || MOUSEY != 0;
-    GameObject current = EventSystem.current.currentSelectedGameObject;
 
-         if(mousing) EventSystem.current.SetSelectedGameObject(null);
+         if(mousing && !inputing) EventSystem.current.SetSelectedGameObject(null);
     else if(navigating) Tools.ClearHover();
 
          if(!navigating) currentDelay = 0;
