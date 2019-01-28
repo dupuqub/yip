@@ -22,7 +22,7 @@ public class Tools
   //....................................................................................................................
   public static void UISelect(string target)
   {
-    EventSystem.current.SetSelectedGameObject(GameObject.Find(target));
+    EventSystem.current.SetSelectedGameObject(target == "" ? null : GameObject.Find(target));
   }
 
   //....................................................................................................................

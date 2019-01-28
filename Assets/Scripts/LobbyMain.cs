@@ -77,7 +77,7 @@ public class LobbyMain : MonoBehaviour
     bool navigating = ARROWX != 0 || ARROWY != 0;
     bool mousing = MOUSEX != 0 || MOUSEY != 0;
 
-         if(mousing && !inputing) EventSystem.current.SetSelectedGameObject(null);
+         if(mousing && !inputing) Tools.UISelect(null);
     else if(navigating) Tools.ClearHover();
 
          if(!navigating) currentDelay = 0;
