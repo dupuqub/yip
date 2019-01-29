@@ -176,9 +176,8 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressSettings()
   {
-    GameObject Appendix = GameObject.Find("Appendix");
-    bool moving = Appendix.GetComponent<Slide>().move;
-    if(!moving) Appendix.GetComponent<Slide>().move = true;
+    Slide Appendix = GameObject.Find("Appendix").GetComponent<Slide>();
+    if(!Appendix.move) Appendix.move = true;
   }
 
   //....................................................................................................................
