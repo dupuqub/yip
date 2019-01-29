@@ -1,6 +1,7 @@
 {
   "id": "English",
   "name": "English",
+  "erase": "Really ERASE save?",
   "lastSave": "last save",
   "newPlayer": "new player",
   "question": "Who are you?",

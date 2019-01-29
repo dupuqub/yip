@@ -1,6 +1,7 @@
 {
   "id": "Portuguese",
   "name": "Português",
+  "erase": "Quer APAGAR o salve?",
   "lastSave": "último salve",
   "newPlayer": "novo jogador",
   "question": "Quem é você?",

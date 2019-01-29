@@ -4,11 +4,11 @@ public class Slide : MonoBehaviour
 {
   public int delay;
   public bool move;
+  public bool hiding;
   public Vector3 hide;
   public Vector3 show;
 
   int delayNow;
-  bool hiding;
   Vector3 target;
 
   void Start()

@@ -12,6 +12,7 @@ public class Serials
   {
     public string id;
     public string name;
+    public string erase;
     public string lastSave;
     public string newPlayer;
     public string question;

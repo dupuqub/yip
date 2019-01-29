@@ -118,11 +118,13 @@ public class LobbyTools : MonoBehaviour
     Text Language = GameObject.Find("Language").transform.GetChild(0).GetComponent<Text>();
     Text Settings = GameObject.Find("Settings").transform.GetChild(0).GetComponent<Text>();
     Text Exit = GameObject.Find("Exit").transform.GetChild(0).GetComponent<Text>();
+    Text Title = GameObject.Find("Appendix").transform.GetChild(0).GetChild(0).GetComponent<Text>();
 
     Question.text = Lang.question;
     Language.text = $"{Lang.name}    <size=30px><color=#DDCCFF88><i>{Lang.id}</i></color></size>";
     Settings.text = Lang.settings;
     Exit.text = Lang.exit;
+    Title.text = Lang.settings;
 
     for(int index = 0; index < 4; index ++)
     {
@@ -176,8 +178,16 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressSettings()
   {
+    string _CommonJson = Tools.GetFile("/Sources/_Common.json");
+    Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+
+    string LangJson = Tools.GetFile($"/Langs/{_Common.lang}/Lobby.json");
+    Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
+
     Slide Appendix = GameObject.Find("Appendix").GetComponent<Slide>();
+
     if(!Appendix.move) Appendix.move = true;
+    else Appendix.hiding = !Appendix.hiding;
   }
 
   //....................................................................................................................
