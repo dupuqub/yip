@@ -141,7 +141,7 @@ public class LobbyTools : MonoBehaviour
 
         Placeholder.text = SaveMain.name;
         Placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
-        Last.text = $"{Lang.lastLogin} - {SaveMain.lastLogin}";
+        Last.text = $"{Lang.lastSave} - {SaveMain.lastSave}";
       }
       else
       {

@@ -12,7 +12,7 @@ public class Serials
   {
     public string id;
     public string name;
-    public string lastLogin;
+    public string lastSave;
     public string newPlayer;
     public string question;
     public string settings;
@@ -23,6 +23,6 @@ public class Serials
   public class SaveMain
   {
     public string name;
-    public string lastLogin;
+    public string lastSave;
   }
 }
