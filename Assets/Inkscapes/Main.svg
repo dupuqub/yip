@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.63245702"
-     inkscape:cx="844.257"
-     inkscape:cy="490.40579"
+     inkscape:zoom="0.64"
+     inkscape:cx="968.40504"
+     inkscape:cy="521.29975"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer3"
      showgrid="false"
      units="px"
      borderlayer="false"
@@ -65,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,7 +73,8 @@
      inkscape:label="Background"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-11.249985)">
+     transform="translate(0,-11.249985)"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#332255;fill-opacity:1;stroke:none;stroke-width:2.64583349;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect10"
@@ -90,14 +91,15 @@
      id="layer2"
      inkscape:label="Account"
      style="display:inline"
-     transform="translate(0,-1.741211e-6)">
+     transform="translate(0,-1.741211e-6)"
+     sodipodi:insensitive="true">
     <path
        style="fill:#cc2255;fill-opacity:1;stroke:none;stroke-width:0.26461864px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 0,1.4824219e-6 V 285.75 H 128.67131 L 291.98259,12.197537 h 98.3218 L 401.10832,1.4824163e-6 Z"
+       d="M 0,1.4824219e-6 V 285.75 H 128.5875 L 291.98259,12.197537 h 98.3218 L 401.10832,1.4824163e-6 Z"
        id="path6201"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc"
-       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Main\PinkBox.png"
+       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\PinkBox.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <path
@@ -405,7 +407,7 @@
     </g>
     <g
        id="g932"
-       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Main\MainSettings.png"
+       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\MainLanguage.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <path
@@ -427,19 +429,19 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ddccff;fill-opacity:1;stroke:none;stroke-width:0.33848476;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ddccff;fill-opacity:1;stroke:none;stroke-width:0.33848476"
        x="12.556447"
        y="202.70445"
        id="text5094-3-97"><tspan
          sodipodi:role="line"
          x="12.556447"
          y="202.70445"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ddccff;fill-opacity:1;stroke-width:0.33848476;"
-         id="tspan5661-2">Settings</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ddccff;fill-opacity:1;stroke-width:0.33848476"
+         id="tspan5661-2">Language</tspan></text>
     <g
        id="g928"
        transform="matrix(0.99858668,0,0,0.99252422,0.01365616,1.8242339)"
-       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Main\MainCredits.png"
+       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\MainSettings.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <path
@@ -457,19 +459,19 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ddccff;fill-opacity:1;stroke:none;stroke-width:0.33848476;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ddccff;fill-opacity:1;stroke:none;stroke-width:0.33848476"
        x="12.555117"
        y="235.29381"
        id="text5094-3-97-8"><tspan
          sodipodi:role="line"
          x="12.555117"
          y="235.29381"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ddccff;fill-opacity:1;stroke-width:0.33848476;"
-         id="tspan5661-2-7">Credits</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ddccff;fill-opacity:1;stroke-width:0.33848476"
+         id="tspan5661-2-7">Settings</tspan></text>
     <g
        id="g936"
        transform="matrix(0.99864903,0,0,0.99252341,0.0130519,2.0680885)"
-       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Main\MainExit.png"
+       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\MainExit.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <path
@@ -487,14 +489,14 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ddccff;fill-opacity:1;stroke:none;stroke-width:0.33848476;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ddccff;fill-opacity:1;stroke:none;stroke-width:0.33848476"
        x="12.553786"
        y="267.88315"
        id="text5094-3-97-6"><tspan
          sodipodi:role="line"
          x="12.553786"
          y="267.88315"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ddccff;fill-opacity:1;stroke-width:0.33848476;"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ddccff;fill-opacity:1;stroke-width:0.33848476"
          id="tspan5661-2-6">Exit</tspan></text>
     <g
        id="g4869"
@@ -585,5 +587,19 @@
          y="121.10858"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#332255;fill-opacity:1;stroke-width:0.33848476"
          id="tspan5661-89-0-1">Bob Burguer</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="AccountAppendix">
+    <path
+       style="display:inline;fill:#8877aa;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 401.10833,-4.741211e-6 390.30439,12.197535 H 291.98258 L 128.58749,285.75 H 508.00002 V -4.741211e-6 Z"
+       id="path904"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\Appendix.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>
