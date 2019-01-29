@@ -4,11 +4,11 @@ public class LobbyMain : MonoBehaviour
 {
   void Start()
   {
-    LobbyTools.UpdateLang();
+    LobbyTools.UpdateLanguage();
   }
 
   void Update()
   {
-    LobbyTools.UpdateUI();
+    LobbyTools.UpdateNavigation();
   }
 }

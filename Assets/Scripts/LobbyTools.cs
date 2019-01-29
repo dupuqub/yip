@@ -15,7 +15,7 @@ public class LobbyTools : MonoBehaviour
   public static int delay = 20;
   public static int currentDelay = 0;
 
-  public static void UpdateUI()
+  public static void UpdateNavigation()
   {
     float MOUSEX = Input.GetAxis("MOUSEX");
     float MOUSEY = Input.GetAxis("MOUSEY");
@@ -106,7 +106,7 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
-  public static void UpdateLang()
+  public static void UpdateLanguage()
   {
     string _CommonJson = Tools.GetFile("/Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
@@ -152,7 +152,7 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
-  public void ChangeLang()
+  public void PressLanguage()
   {
     string _CommonJson = Tools.GetFile("/Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
@@ -170,6 +170,30 @@ public class LobbyTools : MonoBehaviour
     string newSave = $"{JsonUtility.ToJson(_Common, true)}\n";
     Tools.SetFile(address, newSave);
 
-    UpdateLang();
+    UpdateLanguage();
+  }
+
+  //....................................................................................................................
+  public void PressSettings()
+  {
+    Debug.Log("Settings");
+  }
+
+  //....................................................................................................................
+  public void PressExit()
+  {
+    Debug.Log("Exit");
+  }
+
+  //....................................................................................................................
+  public void PressPlay(int index)
+  {
+    Debug.Log($"Play {index}");
+  }
+
+  //....................................................................................................................
+  public void PressErase(int index)
+  {
+    Debug.Log($"Erase {index}");
   }
 }
