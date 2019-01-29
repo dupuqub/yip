@@ -3,29 +3,42 @@
 public class Slide : MonoBehaviour
 {
   public int delay;
-  public int start;
-  public int end;
+  public bool move;
+  public Vector3 hide;
+  public Vector3 show;
 
-  int currentDelay;
-  Vector3 origin;
-  Vector3 future;
+  int delayNow;
+  bool hiding;
+  Vector3 target;
 
   void Start()
   {
-    currentDelay = delay;
-    origin = transform.localPosition;
-    future = new Vector3(end, origin.y, origin.z);
-    transform.localPosition = new Vector3(start, origin.y, origin.z);
+    transform.localPosition = hide;
+    delayNow = delay;
+    hiding = true;
   }
 
   void FixedUpdate()
   {
-    // Move.
-    if(currentDelay > 0) currentDelay --;
-    else transform.localPosition = Vector3.Lerp(transform.localPosition, future, 0.1f);
+    if(move)
+    {
+      target = hiding ? show : hide;
 
-    // End.
-    if(transform.localPosition.x + 0.1f > end
-    && transform.localPosition.x - 0.1f < end) Destroy(this);
+      // Move.
+      if(delayNow > 0) delayNow --;
+      else transform.localPosition = Vector3.Lerp(transform.localPosition, target, 0.1f);
+
+      // End.
+      if(transform.localPosition.x + 0.1f > target.x
+      && transform.localPosition.x - 0.1f < target.x
+      && transform.localPosition.y + 0.1f > target.y
+      && transform.localPosition.y - 0.1f < target.y
+      && transform.localPosition.z + 0.1f > target.z
+      && transform.localPosition.z - 0.1f < target.z)
+      {
+        move = false;
+        hiding = !hiding;
+      }
+    }
   }
 }
