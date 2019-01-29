@@ -176,13 +176,15 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressSettings()
   {
-    Debug.Log("Settings");
+    GameObject Appendix = GameObject.Find("Appendix");
+    bool moving = Appendix.GetComponent<Slide>().move;
+    if(!moving) Appendix.GetComponent<Slide>().move = true;
   }
 
   //....................................................................................................................
   public void PressExit()
   {
-    // Application.Quit();
+    Application.Quit();
     Debug.Log("Exit");
   }
 
