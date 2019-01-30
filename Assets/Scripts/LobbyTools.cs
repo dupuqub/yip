@@ -227,10 +227,7 @@ public class LobbyTools : MonoBehaviour
       {
         if(!Confirm.hiding) Confirm.move = true;
       }
-      else
-      {
-        if(Confirm.hiding) Confirm.hiding = false;
-      }
+      else if(Confirm.hiding) Confirm.hiding = false;
     }
   }
 }
