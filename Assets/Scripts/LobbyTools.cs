@@ -128,6 +128,11 @@ public class LobbyTools : MonoBehaviour
 
     for(int index = 0; index < 4; index ++)
     {
+      // Confirms.
+      Text LastSave = GameObject.Find($"Confirm{index}").transform.GetChild(2).GetComponent<Text>();
+      LastSave.text = Lang.erase;
+
+      // Saves.
       GameObject Save = GameObject.Find($"Save{index}");
       GameObject Input = Save.transform.Find($"Input{index}").gameObject;
       InputField Field = Input.GetComponent<InputField>();
@@ -206,6 +211,26 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressErase(int index)
   {
-    Debug.Log($"Erase {index}");
+    for(int indexFor = 0; indexFor < 4; indexFor ++)
+    {
+      Slide Confirm = GameObject.Find($"Confirm{indexFor}").GetComponent<Slide>();
+
+      // Pressed erase.
+      if(index == indexFor)
+      {
+        if(!Confirm.move) Confirm.move = true;
+        else if(!Confirm.hiding) Confirm.hiding = true;
+      }
+
+      // Other erases.
+      else if(!Confirm.move)
+      {
+        if(!Confirm.hiding) Confirm.move = true;
+      }
+      else
+      {
+        if(Confirm.hiding) Confirm.hiding = false;
+      }
+    }
   }
 }

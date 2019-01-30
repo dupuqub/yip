@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="1732.9505"
-     inkscape:cy="377.52773"
+     inkscape:zoom="0.5"
+     inkscape:cx="1176.3845"
+     inkscape:cy="564.59137"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -52,7 +52,7 @@
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="true"
      inkscape:snap-page="true"
-     inkscape:snap-global="false"
+     inkscape:snap-global="true"
      showguides="true"
      inkscape:guide-bbox="true">
     <inkscape:grid
@@ -67,7 +67,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -359,7 +359,7 @@
          id="tspan5661-89-0-1">Bob Burguer</tspan></text>
     <path
        style="fill:#8877aa;fill-opacity:1;stroke:none;stroke-width:0.25205401px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 442.23575,162.23041 -4.35779,6.18239 h 8.46007 c 2.3381,0 5.84716,0.36258 3.13518,5.52575 l -7.29934,14.61167 c -1.26826,2.26007 -2.17077,2.5729 -4.50889,2.5729 H 275.53565 l -6.70193,9.59923 c -1.84822,2.75582 -0.0181,4.15208 2.43086,4.15208 l 171.35552,0.11736 c 3.10547,-0.004 4.64923,-0.64662 5.82282,-3.15672 l 2.53994,-4.52215 237.25446,0 v -38.8878 H 450.71159 c -5.43036,0.0549 -6.13296,0.42275 -8.47584,3.80529 z"
+       d="m 371.14206,170.46231 -4.9531,7.17458 h 6.67413 c 2.3381,0 5.84716,0.36258 3.13518,5.52575 l -6.70403,13.61948 c -1.26826,2.26007 -2.17077,2.5729 -4.50889,2.5729 H 204.44196 l -6.70193,9.59923 c -1.84822,2.75582 -0.0181,4.15208 2.43086,4.15208 l 171.35552,0.11736 c 3.10547,-0.004 4.64923,-0.64662 5.82282,-3.15672 l 2.53994,-4.52215 h 237.25446 v -38.8878 H 379.6179 c -5.43036,0.0549 -6.13296,0.42275 -8.47584,3.80529 z"
        id="path10539"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccsccscccccccccc"
@@ -369,12 +369,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5875845px;line-height:1.25;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ddccff;fill-opacity:1;stroke:none;stroke-width:0.36471552"
-       x="277.70215"
-       y="200.06322"
+       x="206.60846"
+       y="208.29512"
        id="text5094-3-9-8"><tspan
          sodipodi:role="line"
-         x="277.70215"
-         y="200.06322"
+         x="206.60846"
+         y="208.29512"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5875845px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ddccff;fill-opacity:1;stroke-width:0.36471552"
          id="tspan5661-8-7">Really ERASE save?</tspan></text>
     <g
@@ -456,7 +456,7 @@
     </g>
     <g
        id="g10928"
-       transform="matrix(0.99858981,0,0,0.99921951,-8.1389544,0.15142893)"
+       transform="matrix(0.99858981,0,0,0.99921951,58.03198,54.476576)"
        inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\No.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
@@ -481,7 +481,7 @@
     </g>
     <g
        id="g10933"
-       transform="matrix(0.99685987,0,0,0.99518544,-7.2102478,0.9334745)"
+       transform="matrix(0.99685987,0,0,0.99518544,58.96068,55.258622)"
        inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\Yes.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
@@ -503,6 +503,64 @@
          id="path4608-4-7-0-5"
          d="m 527.07019,178.80229 c -0.37858,-0.0492 -0.75635,0.0502 -1.0531,0.27953 l -7.6161,5.37042 -2.00237,-2.43192 c -0.77316,-1.066 -2.50164,-0.58707 -2.67712,0.74193 -0.0492,0.37859 0.0506,0.75643 0.27997,1.05316 l 2.73882,3.41653 c 0.3927,0.74025 1.33665,1.2093 2.19945,0.55988 l 0.0459,-0.0344 c 0.009,-0.007 0.0173,-0.0127 0.0258,-0.0193 l 8.80116,-6.25864 c 1.066,-0.77317 0.58663,-2.5017 -0.74238,-2.67717 z"
          style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#970e32;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.93987298;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </g>
+    <g
+       id="g9198"
+       transform="matrix(1.0005841,0,0,0.99977347,-0.22890992,0.04581586)"
+       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\No.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="path10816-4-1"
+         transform="matrix(0.26458334,0,0,0.26458334,0,1.741211e-6)"
+         d="m 1740.1035,647.38281 v 1.41602 c -2.1487,-0.89158 -5.1088,-1.39844 -9.0957,-1.39844 h -220.373 c -0.8476,-0.0184 -1.6618,-0.0225 -2.4434,-0.0137 -11.7235,0.13204 -16.2861,3.49542 -21.582,15.38867 l -2.5078,5.46094 h -2.9825 v 8.42773 h 0.022 c -0.082,3.79926 2.2106,7.40821 10.8184,7.40821 h 85.2207 c 7.9976,-0.85429 14.5096,6.92764 10.2637,15.53125 l -21.5391,48.49218 c -3.1154,7.31637 -1.3109,16.65823 11.6641,16.30469 h 102.3828 c 14.5074,-0.13342 20.3836,-4.94813 26.416,-18.23437 l 36.8047,-82.91993 c 1.079,-2.63212 1.7931,-5.17888 1.789,-7.43359 v 0 -8.42969 z"
+         style="display:inline;fill:#ddaa00;fill-opacity:1;stroke:none;stroke-width:1.16380703px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;fill:#ffdd22;fill-opacity:1;stroke:none;stroke-width:0.30792394px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 451.47656,195.30623 9.7375,-21.93878 c 0.90551,-2.20872 0.85171,-4.1926 -3.21827,-4.1926 h -58.30717 c -3.58798,-0.0777 -4.86196,0.71116 -6.35659,4.0677 l -0.81726,1.78052 c -0.68488,1.0629 -1.66231,3.85443 2.23258,3.85443 h 22.54831 c 2.11604,-0.22602 3.83868,1.83279 2.71526,4.10916 l -5.69891,12.83039 c -0.82428,1.9358 -0.34685,4.40744 3.0861,4.31389 h 27.08877 c 3.83841,-0.0353 5.39363,-1.3094 6.98968,-4.82471 z"
+         id="path10816-4-1-3"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <path
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ddaa00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.86513448;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         d="m 432.37141,176.34545 c -1.27616,-0.27089 -2.14777,1.11897 -1.37168,2.18729 l 3.90817,5.54531 -8.29734,5.95318 c -1.5543,1.03068 0.14591,3.43883 1.69661,2.40314 l 8.29702,-5.95327 3.90846,5.54572 c 1.12436,1.64341 3.49812,0.0627 2.32408,-1.54759 l -3.90741,-5.54547 8.69292,-5.95302 c 1.07219,-0.68957 0.65189,-2.37963 -0.65098,-2.61769 -0.37106,-0.0678 -0.74571,0.009 -1.04458,0.21479 l -8.69402,5.95311 -3.90778,-5.54557 c -0.22501,-0.32771 -0.56897,-0.55857 -0.95347,-0.63993 z"
+         id="path4608-4-7-5-0"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccc" />
+    </g>
+    <g
+       id="g9204"
+       transform="matrix(0.99798804,0,0,0.99262236,0.76895175,1.4921601)"
+       inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\Yes.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         transform="matrix(0.26458334,0,0,0.26458334,0,1.741211e-6)"
+         id="rect10833-9-0"
+         d="m 1564.8887,698.34766 v 1.9375 c -0.8761,-0.24982 -1.8472,-0.39454 -2.9239,-0.39454 h -80.7695 c -6.4343,0 -13.7482,4.76326 -16.3984,10.67969 l -17.5977,39.28125 h -2.7012 v 8.42969 h 0.031 c 0.2215,3.63394 3.091,6.14453 7.7578,6.14453 h 80.7695 c 6.4343,0 13.7462,-4.76318 16.3965,-10.67969 l 19.3418,-43.17578 c 0.6,-1.33942 0.8927,-2.61364 0.9356,-3.79297 h 0.02 v -0.37109 -8.05859 z"
+         style="display:inline;opacity:1;fill:#970e32;fill-opacity:1;stroke:none;stroke-width:6.06258631;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         inkscape:connector-curvature="0" />
+      <g
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="C:\Users\dupuqub\Documents\unity\Yip\Assets\Images\Lobby\Yes.png"
+         transform="matrix(-0.99685986,0,-0.86724367,0.99518545,1076.8913,8.8957812)"
+         id="g10933-2-6"
+         style="display:inline">
+        <path
+           style="display:inline;opacity:1;fill:#cc2255;fill-opacity:1;stroke:none;stroke-width:1.61046529;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+           d="m 513.45838,175.00955 h 21.43728 c 1.70778,0 2.54726,1.26633 1.88225,2.83929 l -4.85305,11.47906 c -0.66501,1.57298 -2.57523,2.83931 -4.28301,2.83931 h -21.43728 c -1.70778,0 -2.54726,-1.26633 -1.88224,-2.83931 l 4.85304,-11.47906 c 0.66501,-1.57296 2.57523,-2.83929 4.28301,-2.83929 z"
+           id="rect10833-9-0-7"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sssssssss" />
+      </g>
+      <path
+         style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#970e32;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.92817903;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         d="m 405.01546,186.90761 c -0.38014,-0.049 -0.75118,0.0499 -1.03422,0.27818 l -7.29299,5.34456 -2.13157,-2.42021 c -0.83013,-1.06086 -2.52649,-0.58424 -2.62738,0.73836 -0.0279,0.37677 0.0925,0.75279 0.33776,1.04809 l 2.92055,3.40008 c 0.43271,0.73669 1.39984,1.20348 2.22375,0.55719 l 0.0438,-0.0342 c 0.009,-0.007 0.0165,-0.0126 0.0246,-0.0192 l 8.42484,-6.22851 c 1.01959,-0.76945 0.44542,-2.48966 -0.88918,-2.66428 z"
+         id="path4608-4-7-0-5-7"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccscccc" />
     </g>
   </g>
   <g
