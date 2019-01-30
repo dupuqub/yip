@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="1023.3292"
-     inkscape:cy="481.38403"
+     inkscape:cx="1237.5649"
+     inkscape:cy="426.2124"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -55,7 +55,7 @@
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="true"
      inkscape:snap-page="true"
-     inkscape:snap-global="false"
+     inkscape:snap-global="true"
      showguides="true"
      inkscape:guide-bbox="true">
     <inkscape:grid
@@ -317,8 +317,8 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6388855px;font-family:'Reem Kufi';-inkscape-font-specification:'Reem Kufi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#332255;fill-opacity:1;stroke-width:0.33848476"
          id="tspan5661-89-0-1">Bob Burguer</tspan></text>
     <path
-       style="fill:#8877aa;fill-opacity:1;stroke:none;stroke-width:0.25209662px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 388.17034,163.30149 -5.44496,7.17458 h 6.67639 c 2.33889,0 5.82436,0.36258 2.7587,5.52575 l -7.63683,13.61948 c -1.4231,2.26007 -2.34729,2.5729 -4.6862,2.5729 h -160.3976 l -7.36005,9.59923 c -2.03713,2.75582 -0.30179,4.15208 2.148,4.15208 l 146.70973,0.11736 c 3.10679,-0.004 4.69499,-0.64662 6.04048,-3.15672 l 1.35421,-2.14895 c 1.32746,-2.15491 1.98322,-2.3732 5.07339,-2.3732 l 258.45253,0 2.65695,-38.8878 H 396.90904 c -5.43595,0.0549 -6.16392,0.42275 -8.7387,3.80529 z"
+       style="fill:#8877aa;fill-opacity:1;stroke:none;stroke-width:0.25201964px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 388.27654,163.61362 -5.44163,7.17458 h 6.67231 c 2.33746,0 5.82081,0.36258 2.75702,5.52575 l -7.63217,13.61948 c -1.42223,2.26007 -2.34586,2.5729 -4.68334,2.5729 H 217.50066 l -5.20713,9.59923 c -2.03588,2.75582 -1.22881,4.26944 1.21949,4.26944 h 147.54734 c 3.10489,-0.004 4.69212,-0.64662 6.03679,-3.15672 l 1.35338,-2.14895 c 1.32665,-2.15491 1.98201,-2.3732 5.07029,-2.3732 h 260.95002 l 0,-38.8878 H 397.00991 c -5.43263,0.0549 -6.16016,0.42275 -8.73337,3.80529 z"
        id="path10539"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccsccsccccccccccc"
