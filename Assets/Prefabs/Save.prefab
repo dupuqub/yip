@@ -196,7 +196,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5635462734329415920}
-        m_MethodName: PressGeneric
+        m_MethodName: PressErase
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

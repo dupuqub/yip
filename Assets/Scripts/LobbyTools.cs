@@ -240,7 +240,7 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
-  public void PressGeneric(string action)
+  public void PressErase(string action)
   {
     // "action" is a combination of 1 letter and 1 number.
     // The letter might be "C" for "cancel", "S" for "start" or "F" for "finish".
