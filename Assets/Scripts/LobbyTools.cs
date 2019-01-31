@@ -125,10 +125,10 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public static void UpdateLanguage()
   {
-    string _CommonJson = Tools.FileGet("/Sources/_Common.json");
+    string _CommonJson = Tools.FileRead("Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
-    string LangJson = Tools.FileGet($"/Langs/{_Common.lang}/Lobby.json");
+    string LangJson = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
     Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     Text Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
@@ -156,11 +156,11 @@ public class LobbyTools : MonoBehaviour
       Text Placeholder = Field.placeholder.GetComponent<Text>();
       Text Last = Save.transform.Find("Last").gameObject.GetComponent<Text>();
 
-      bool directoryExists = Tools.DirExists($"/Saves/Save{index}");
+      bool directoryExists = Tools.DirExists($"Saves/Save{index}");
 
       if(directoryExists)
       {
-        string SaveMainJson = Tools.FileGet($"/Saves/Save{index}/Main.json");
+        string SaveMainJson = Tools.FileRead($"Saves/Save{index}/Main.json");
         Serials.SaveMain SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
 
         Placeholder.text = SaveMain.name;
@@ -179,7 +179,7 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressLanguage()
   {
-    string _CommonJson = Tools.FileGet("/Sources/_Common.json");
+    string _CommonJson = Tools.FileRead("Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
     // Only list containing every language.
@@ -191,9 +191,9 @@ public class LobbyTools : MonoBehaviour
 
     _Common.lang = newLang;
 
-    string address = "/Sources/_Common.json";
+    string address = "Sources/_Common.json";
     string newSave = $"{JsonUtility.ToJson(_Common, true)}\n";
-    Tools.FileSet(address, newSave);
+    Tools.FileCreate(address, newSave);
 
     UpdateLanguage();
   }
@@ -202,10 +202,10 @@ public class LobbyTools : MonoBehaviour
   public void PressSettings()
   {
     // Gather sources.
-    string _CommonJson = Tools.FileGet("/Sources/_Common.json");
+    string _CommonJson = Tools.FileRead("Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
-    string LangJson = Tools.FileGet($"/Langs/{_Common.lang}/Lobby.json");
+    string LangJson = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
     Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     // Show appendix.
@@ -237,7 +237,23 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressPlay(int index)
   {
-    Debug.Log($"Play {index}");
+    if(Tools.DirExists($"Saves/Save{index}"))
+    {
+      Debug.Log($"Play {index}");
+    }
+    else
+    {
+      string dirPath = $"Saves/Save{index}";
+      string modelPath = $"Saves/Model";
+
+      string SaveMainJson = Tools.FileRead($"{modelPath}/Main.json");
+      Serials.SaveMain SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
+
+      Debug.Log($"name: {SaveMain.name}");
+
+      Tools.DirCreate(dirPath);
+      Tools.FileCreate($"{dirPath}/Main.json", SaveMainJson);
+    }
   }
 
   //....................................................................................................................
@@ -249,9 +265,9 @@ public class LobbyTools : MonoBehaviour
 
     int number = Int32.Parse(action.Substring(1));
     string letter = action.Substring(0, 1);
-    string address = $"/Saves/Save{number}";
+    string address = $"Saves/Save{number}";
 
-    // Delete folder.
+    // Delete folder and its meta.
     if(letter == "F" && Tools.DirExists(address))
     {
       Tools.DirDelete(address);
