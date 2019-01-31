@@ -65,7 +65,8 @@ public class LobbyTools : MonoBehaviour
         else if(UP) Tools.UISelect("Settings");
       }
 
-      else if(Current.name.Substring(0, 5) == "Input")
+      else if(Current.name.Length > 4
+      && Current.name.Substring(0, 5) == "Input")
       {
         string index = Current.name.Substring(Current.name.Length - 1);
         int indexInt = Int32.Parse(index);
@@ -78,7 +79,8 @@ public class LobbyTools : MonoBehaviour
         else if(UP) Tools.UISelect("Input" + indexUp.ToString());
       }
 
-      else if(Current.name.Substring(0, 4) == "Play")
+      else if(Current.name.Length > 3
+      && Current.name.Substring(0, 4) == "Play")
       {
         string index = Current.name.Substring(Current.name.Length - 1);
         int indexInt = Int32.Parse(index);
@@ -91,7 +93,8 @@ public class LobbyTools : MonoBehaviour
         else if(UP) Tools.UISelect("Play" + indexUp.ToString());
       }
 
-      else if(Current.name.Substring(0, 5) == "Erase")
+      else if(Current.name.Length > 4
+      && Current.name.Substring(0, 5) == "Erase")
       {
         string index = Current.name.Substring(Current.name.Length - 1);
         int indexInt = Int32.Parse(index);
@@ -101,6 +104,20 @@ public class LobbyTools : MonoBehaviour
              if(LEFT) Tools.UISelect("Play" + index);
         else if(DOWN) Tools.UISelect("Erase" + indexDown.ToString());
         else if(UP) Tools.UISelect("Erase" + indexUp.ToString());
+      }
+
+      else if(Current.name.Length > 2
+      && Current.name.Substring(0, 3) == "Yes")
+      {
+        string index = Current.name.Substring(Current.name.Length - 1);
+        if(LEFT || RIGHT) Tools.UISelect("No" + index);
+      }
+
+      else if(Current.name.Length > 1
+      && Current.name.Substring(0, 2) == "No")
+      {
+        string index = Current.name.Substring(Current.name.Length - 1);
+        if(LEFT || RIGHT) Tools.UISelect("Yes" + index);
       }
     }
   }
@@ -183,16 +200,30 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressSettings()
   {
+    // Gather sources.
     string _CommonJson = Tools.GetFile("/Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
     string LangJson = Tools.GetFile($"/Langs/{_Common.lang}/Lobby.json");
     Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
+    // Show appendix.
     Slide Appendix = GameObject.Find("Appendix").GetComponent<Slide>();
 
     if(!Appendix.move) Appendix.move = true;
     else Appendix.hiding = !Appendix.hiding;
+
+    // Hide confirmations.
+    for(int index = 0; index < 4; index ++)
+    {
+      Slide Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
+      
+      if(!Confirm.move)
+      {
+        if(!Confirm.hiding) Confirm.move = true;
+      }
+      else if(Confirm.hiding) Confirm.hiding = false;
+    }
   }
 
   //....................................................................................................................
@@ -212,20 +243,25 @@ public class LobbyTools : MonoBehaviour
   public void PressGeneric(string action)
   {
     // "action" is a combination of 1 letter and 1 number.
-    // The letter might be "C" for "cancel", "E" for "erase" or "F" for "finish".
+    // The letter might be "C" for "cancel", "S" for "start" or "F" for "finish".
     // The number is from 0 to 3 (which button was pressed).
+
+    Slide Confirm;
+    string letter = action.Substring(0, 1);
+    int number = Int32.Parse(action.Substring(1));
+
+    if(letter == "S") Tools.UISelect($"No{number}");
+    else Tools.UISelect($"Play{number}");
 
     for(int index = 0; index < 4; index ++)
     {
-      Slide Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
-      string letter = action.Substring(0, 1);
-      int number = Int32.Parse(action.Substring(1));
+      Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
 
       // Pressed erase.
       if(number == index)
       {
         if(!Confirm.move) Confirm.move = true;
-        else Confirm.hiding = letter == "E";
+        else Confirm.hiding = letter == "S";
       }
 
       // Other erases.
