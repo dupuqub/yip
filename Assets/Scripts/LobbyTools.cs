@@ -125,10 +125,10 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public static void UpdateLanguage()
   {
-    string _CommonJson = Tools.GetFile("/Sources/_Common.json");
+    string _CommonJson = Tools.FileGet("/Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
-    string LangJson = Tools.GetFile($"/Langs/{_Common.lang}/Lobby.json");
+    string LangJson = Tools.FileGet($"/Langs/{_Common.lang}/Lobby.json");
     Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     Text Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
@@ -160,7 +160,7 @@ public class LobbyTools : MonoBehaviour
 
       if(directoryExists)
       {
-        string SaveMainJson = Tools.GetFile($"/Saves/Save{index}/Main.json");
+        string SaveMainJson = Tools.FileGet($"/Saves/Save{index}/Main.json");
         Serials.SaveMain SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
 
         Placeholder.text = SaveMain.name;
@@ -179,7 +179,7 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressLanguage()
   {
-    string _CommonJson = Tools.GetFile("/Sources/_Common.json");
+    string _CommonJson = Tools.FileGet("/Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
     // Only list containing every language.
@@ -193,7 +193,7 @@ public class LobbyTools : MonoBehaviour
 
     string address = "/Sources/_Common.json";
     string newSave = $"{JsonUtility.ToJson(_Common, true)}\n";
-    Tools.SetFile(address, newSave);
+    Tools.FileSet(address, newSave);
 
     UpdateLanguage();
   }
@@ -202,10 +202,10 @@ public class LobbyTools : MonoBehaviour
   public void PressSettings()
   {
     // Gather sources.
-    string _CommonJson = Tools.GetFile("/Sources/_Common.json");
+    string _CommonJson = Tools.FileGet("/Sources/_Common.json");
     Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
-    string LangJson = Tools.GetFile($"/Langs/{_Common.lang}/Lobby.json");
+    string LangJson = Tools.FileGet($"/Langs/{_Common.lang}/Lobby.json");
     Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     // Show appendix.

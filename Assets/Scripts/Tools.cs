@@ -12,8 +12,8 @@ public class Tools
 
   public static bool FileExists(string address){return File.Exists($"{Application.streamingAssetsPath}{address}");}
   public static void FileDelete(string address){File.Delete($"{Application.streamingAssetsPath}{address}");}
-  public static void SetFile(string address, string newSave){File.WriteAllText($"{Application.streamingAssetsPath}{address}", newSave);}
-  public static string GetFile(string address){return File.ReadAllText($"{Application.streamingAssetsPath}{address}");}
+  public static void FileSet(string address, string newSave){File.WriteAllText($"{Application.streamingAssetsPath}{address}", newSave);}
+  public static string FileGet(string address){return File.ReadAllText($"{Application.streamingAssetsPath}{address}");}
 
   public static void UISelect(string target){EventSystem.current.SetSelectedGameObject(target == "" ? null : GameObject.Find(target));}
   public static string Title(string word){return $"{word.Substring(0, 1).ToUpper()}{word.Substring(1)}";}
