@@ -126,10 +126,10 @@ public class LobbyTools : MonoBehaviour
   public static void UpdateLanguage()
   {
     string _CommonJson = Tools.FileRead("Sources/_Common.json");
-    Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+    var _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
     string LangJson = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
-    Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
+    var Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     Text Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
     Text Language = GameObject.Find("Language").transform.GetChild(0).GetComponent<Text>();
@@ -161,7 +161,7 @@ public class LobbyTools : MonoBehaviour
       if(directoryExists)
       {
         string SaveMainJson = Tools.FileRead($"Saves/Save{index}/Main.json");
-        Serials.SaveMain SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
+        var SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
 
         Placeholder.text = SaveMain.name;
         Placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
@@ -180,7 +180,7 @@ public class LobbyTools : MonoBehaviour
   public void PressLanguage()
   {
     string _CommonJson = Tools.FileRead("Sources/_Common.json");
-    Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+    var _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
     // Only list containing every language.
     string[] languages = {"English", "Portuguese"};
@@ -203,10 +203,10 @@ public class LobbyTools : MonoBehaviour
   {
     // Gather sources.
     string _CommonJson = Tools.FileRead("Sources/_Common.json");
-    Serials._Common _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+    var _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
 
     string LangJson = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
-    Serials.LobbyLang Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
+    var Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
 
     // Show appendix.
     Slide Appendix = GameObject.Find("Appendix").GetComponent<Slide>();
@@ -247,7 +247,7 @@ public class LobbyTools : MonoBehaviour
       string modelPath = $"Saves/Model";
 
       string SaveMainJson = Tools.FileRead($"{modelPath}/Main.json");
-      Serials.SaveMain SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
+      var SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
 
       Debug.Log($"name: {SaveMain.name}");
 
