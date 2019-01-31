@@ -125,11 +125,11 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public static void UpdateLanguage()
   {
-    string _CommonJson = Tools.FileRead("Sources/_Common.json");
-    var _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+    string json_Common = Tools.FileRead("Sources/_Common.json");
+    var _Common = JsonUtility.FromJson<Serials._Common>(json_Common);
 
-    string LangJson = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
-    var Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
+    string jsonLang = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
+    var Lang = JsonUtility.FromJson<Serials.LobbyLang>(jsonLang);
 
     Text Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
     Text Language = GameObject.Find("Language").transform.GetChild(0).GetComponent<Text>();
@@ -151,7 +151,7 @@ public class LobbyTools : MonoBehaviour
 
       // Saves.
       GameObject Save = GameObject.Find($"Save{index}");
-      GameObject Input = Save.transform.Find($"Input{index}").gameObject;
+      GameObject Input = GameObject.Find($"Input{index}");
       InputField Field = Input.GetComponent<InputField>();
       Text Placeholder = Field.placeholder.GetComponent<Text>();
       Text Last = Save.transform.Find("Last").gameObject.GetComponent<Text>();
@@ -160,8 +160,8 @@ public class LobbyTools : MonoBehaviour
 
       if(directoryExists)
       {
-        string SaveMainJson = Tools.FileRead($"Saves/Save{index}/Main.json");
-        var SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
+        string jsonSaveMain = Tools.FileRead($"Saves/Save{index}/Main.json");
+        var SaveMain = JsonUtility.FromJson<Serials.SaveMain>(jsonSaveMain);
 
         Placeholder.text = SaveMain.name;
         Placeholder.color = new Color(Tools.C(51), Tools.C(34), Tools.C(85));
@@ -179,11 +179,10 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressLanguage()
   {
-    string _CommonJson = Tools.FileRead("Sources/_Common.json");
-    var _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+    string json_Common = Tools.FileRead("Sources/_Common.json");
+    var _Common = JsonUtility.FromJson<Serials._Common>(json_Common);
 
-    // Only list containing every language.
-    string[] languages = {"English", "Portuguese"};
+    string[] languages = _Common.langs;
     int maxIndex = languages.Length - 1;
     int oldIndex = Array.IndexOf(languages, _Common.lang);
     int newIndex = (oldIndex + 1) > maxIndex ? 0 : oldIndex + 1;
@@ -192,7 +191,7 @@ public class LobbyTools : MonoBehaviour
     _Common.lang = newLang;
 
     string address = "Sources/_Common.json";
-    string newSave = $"{JsonUtility.ToJson(_Common, true)}\n";
+    string newSave = JsonUtility.ToJson(_Common, true);
     Tools.FileCreate(address, newSave);
 
     UpdateLanguage();
@@ -202,11 +201,11 @@ public class LobbyTools : MonoBehaviour
   public void PressSettings()
   {
     // Gather sources.
-    string _CommonJson = Tools.FileRead("Sources/_Common.json");
-    var _Common = JsonUtility.FromJson<Serials._Common>(_CommonJson);
+    string json_Common = Tools.FileRead("Sources/_Common.json");
+    var _Common = JsonUtility.FromJson<Serials._Common>(json_Common);
 
-    string LangJson = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
-    var Lang = JsonUtility.FromJson<Serials.LobbyLang>(LangJson);
+    string jsonLang = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
+    var Lang = JsonUtility.FromJson<Serials.LobbyLang>(jsonLang);
 
     // Show appendix.
     Slide Appendix = GameObject.Find("Appendix").GetComponent<Slide>();
@@ -237,22 +236,31 @@ public class LobbyTools : MonoBehaviour
   //....................................................................................................................
   public void PressPlay(int index)
   {
+    GameObject Input = GameObject.Find($"Input{index}");
+    InputField Field = Input.GetComponent<InputField>();
+
     if(Tools.DirExists($"Saves/Save{index}"))
     {
       Debug.Log($"Play {index}");
     }
-    else
+    else if(Field.text != "")
     {
       string dirPath = $"Saves/Save{index}";
       string modelPath = $"Saves/Model";
 
-      string SaveMainJson = Tools.FileRead($"{modelPath}/Main.json");
-      var SaveMain = JsonUtility.FromJson<Serials.SaveMain>(SaveMainJson);
+      string jsonSaveMain = Tools.FileRead($"{modelPath}/Main.json");
+      var SaveMain = JsonUtility.FromJson<Serials.SaveMain>(jsonSaveMain);
 
-      Debug.Log($"name: {SaveMain.name}");
+      SaveMain.name = Field.text;
+
+      string newSaveMain = JsonUtility.ToJson(SaveMain, true);
 
       Tools.DirCreate(dirPath);
-      Tools.FileCreate($"{dirPath}/Main.json", SaveMainJson);
+      Tools.FileCreate($"{dirPath}/Main.json", newSaveMain);
+    }
+    else
+    {
+      Debug.Log("no name");
     }
   }
 

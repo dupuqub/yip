@@ -3,6 +3,7 @@ public class Serials
   [System.Serializable]
   public class _Common
   {
+    public string[] langs;
     public string lang;
     public int account;
   }
