@@ -170,6 +170,7 @@ public class LobbyTools : MonoBehaviour
       else
       {
         Placeholder.text = Lang.newPlayer;
+        Placeholder.color = new Color(Tools.C(170), Tools.C(153), Tools.C(204), Tools.C(128));
         Last.text = "";
       }
     }
@@ -246,17 +247,26 @@ public class LobbyTools : MonoBehaviour
     // The letter might be "C" for "cancel", "S" for "start" or "F" for "finish".
     // The number is from 0 to 3 (which button was pressed).
 
-    Slide Confirm;
-    string letter = action.Substring(0, 1);
     int number = Int32.Parse(action.Substring(1));
+    string letter = action.Substring(0, 1);
+    string address = $"/Saves/Save{number}";
 
-    if(letter == "F") Debug.Log($"Deleted {number}");
+    // Delete folder.
+    if(letter == "F" && Tools.DirExists(address))
+    {
+      Tools.DirDelete(address);
+      Tools.FileDelete($"{address}.meta");
+      UpdateLanguage();
+    }
+
+    // Navigate.
     if(letter == "S") Tools.UISelect($"No{number}");
     else Tools.UISelect($"Play{number}");
 
+    // Move confirmations.
     for(int index = 0; index < 4; index ++)
     {
-      Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
+      Slide Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
 
       // Pressed erase.
       if(number == index)
