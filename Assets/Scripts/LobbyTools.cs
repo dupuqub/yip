@@ -209,17 +209,23 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
-  public void PressErase(int index)
+  public void PressGeneric(string action)
   {
-    for(int indexFor = 0; indexFor < 4; indexFor ++)
+    // "action" is a combination of 1 letter and 1 number.
+    // The letter might be "C" for "cancel", "E" for "erase" or "F" for "finish".
+    // The number is from 0 to 3 (which button was pressed).
+
+    for(int index = 0; index < 4; index ++)
     {
-      Slide Confirm = GameObject.Find($"Confirm{indexFor}").GetComponent<Slide>();
+      Slide Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
+      string letter = action.Substring(0, 1);
+      int number = Int32.Parse(action.Substring(1));
 
       // Pressed erase.
-      if(index == indexFor)
+      if(number == index)
       {
         if(!Confirm.move) Confirm.move = true;
-        else if(!Confirm.hiding) Confirm.hiding = true;
+        else Confirm.hiding = letter == "E";
       }
 
       // Other erases.
