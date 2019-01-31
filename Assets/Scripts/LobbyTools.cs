@@ -12,7 +12,7 @@ public class LobbyTools : MonoBehaviour
   // "Input Field" breaks Unity's UI navigation's flow.
   // Every scene with "Input Field" must therefore have custom UI navigation.
 
-  public static int delay = 20;
+  public static int delay = 30;
   public static int currentDelay = 0;
 
   public static void UpdateNavigation()
@@ -250,6 +250,7 @@ public class LobbyTools : MonoBehaviour
     string letter = action.Substring(0, 1);
     int number = Int32.Parse(action.Substring(1));
 
+    if(letter == "F") Debug.Log($"Deleted {number}");
     if(letter == "S") Tools.UISelect($"No{number}");
     else Tools.UISelect($"Play{number}");
 
