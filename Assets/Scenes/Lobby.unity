@@ -194,7 +194,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 0.73333335, g: 0.73333335, b: 0.73333335, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -666,7 +666,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 0.73333335, g: 0.73333335, b: 0.73333335, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1459,7 +1459,7 @@ MonoBehaviour:
     m_NormalColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.6666667, g: 0.6666667, b: 0.6666667, a: 1}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 0.73333335, g: 0.73333335, b: 0.73333335, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3034,11 +3034,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Erase0
       objectReference: {fileID: 0}
-    - target: {fileID: 5635462734329415921, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: S0
-      objectReference: {fileID: 0}
     - target: {fileID: 5635462735349616729, guid: 79af315c1ffd0614fa58b1fa0751bdd7,
         type: 3}
       propertyPath: m_Name
@@ -3173,20 +3168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: No0
       objectReference: {fileID: 0}
-    - target: {fileID: 8953701599276376757, guid: 845697c01ee91394d9057723199f0d2d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: C0
-      objectReference: {fileID: 0}
     - target: {fileID: 8953701597405751206, guid: 845697c01ee91394d9057723199f0d2d,
         type: 3}
       propertyPath: m_Name
       value: Yes0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8953701597405751204, guid: 845697c01ee91394d9057723199f0d2d,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: F0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 845697c01ee91394d9057723199f0d2d, type: 3}
