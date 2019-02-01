@@ -247,11 +247,13 @@ public class LobbyTools : MonoBehaviour
     {
       string dirPath = $"Saves/Save{index}";
       string modelPath = $"Saves/Model";
+      DateTime date = DateTime.Now;
 
       string jsonSaveMain = Tools.FileRead($"{modelPath}/Main.json");
       var SaveMain = JsonUtility.FromJson<Serials.SaveMain>(jsonSaveMain);
 
       SaveMain.name = Field.text;
+      SaveMain.lastSave = $"{date.ToString("HH:mm")} - {date.ToString("dd/MM/yyyy")}";
 
       string newSaveMain = JsonUtility.ToJson(SaveMain, true);
 
