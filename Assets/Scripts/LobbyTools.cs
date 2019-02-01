@@ -241,7 +241,7 @@ public class LobbyTools : MonoBehaviour
 
     if(Tools.DirExists($"Saves/Save{index}"))
     {
-      Debug.Log($"Play {index}");
+      Debug.Log($"Continue {index}");
     }
     else if(Field.text != "")
     {
@@ -259,10 +259,15 @@ public class LobbyTools : MonoBehaviour
 
       Tools.DirCreate(dirPath);
       Tools.FileCreate($"{dirPath}/Main.json", newSaveMain);
+
+      Debug.Log($"Start {index}");
     }
     else
     {
-      Debug.Log("no name");
+      NameWarningGlow Warning = GameObject.Find("NameWarning").GetComponent<NameWarningGlow>();
+
+      Warning.index = index;
+      Warning.alpha = 1; 
     }
   }
 
