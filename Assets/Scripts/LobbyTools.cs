@@ -131,11 +131,11 @@ public class LobbyTools : MonoBehaviour
     string jsonLang = Tools.FileRead($"Langs/{_Common.lang}/Lobby.json");
     var Lang = JsonUtility.FromJson<Serials.LobbyLang>(jsonLang);
 
-    Text Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
-    Text Language = GameObject.Find("Language").transform.GetChild(0).GetComponent<Text>();
-    Text Settings = GameObject.Find("Settings").transform.GetChild(0).GetComponent<Text>();
-    Text Exit = GameObject.Find("Exit").transform.GetChild(0).GetComponent<Text>();
-    Text Title = GameObject.Find("Appendix").transform.GetChild(0).GetChild(0).GetComponent<Text>();
+    var Question = GameObject.Find("Question").transform.GetChild(0).GetComponent<Text>();
+    var Language = GameObject.Find("Language").transform.GetChild(0).GetComponent<Text>();
+    var Settings = GameObject.Find("Settings").transform.GetChild(0).GetComponent<Text>();
+    var Exit = GameObject.Find("Exit").transform.GetChild(0).GetComponent<Text>();
+    var Title = GameObject.Find("Appendix").transform.GetChild(0).GetChild(0).GetComponent<Text>();
 
     Question.text = Lang.question;
     Language.text = $"{Lang.name}    <size=30px><color=#DDCCFF88><i>{Lang.id}</i></color></size>";
@@ -146,15 +146,15 @@ public class LobbyTools : MonoBehaviour
     for(int index = 0; index < 4; index ++)
     {
       // Confirms.
-      Text LastSave = GameObject.Find($"Confirm{index}").transform.GetChild(2).GetComponent<Text>();
+      var LastSave = GameObject.Find($"Confirm{index}").transform.GetChild(2).GetComponent<Text>();
       LastSave.text = Lang.erase;
 
       // Saves.
       GameObject Save = GameObject.Find($"Save{index}");
       GameObject Input = GameObject.Find($"Input{index}");
-      InputField Field = Input.GetComponent<InputField>();
-      Text Placeholder = Field.placeholder.GetComponent<Text>();
-      Text Last = Save.transform.Find("Last").gameObject.GetComponent<Text>();
+      var Field = Input.GetComponent<InputField>();
+      var Placeholder = Field.placeholder.GetComponent<Text>();
+      var Last = Save.transform.Find("Last").gameObject.GetComponent<Text>();
 
       bool directoryExists = Tools.DirExists($"Saves/Save{index}");
 
@@ -208,7 +208,7 @@ public class LobbyTools : MonoBehaviour
     var Lang = JsonUtility.FromJson<Serials.LobbyLang>(jsonLang);
 
     // Show appendix.
-    Slide Appendix = GameObject.Find("Appendix").GetComponent<Slide>();
+    var Appendix = GameObject.Find("Appendix").GetComponent<Slide>();
 
     if(!Appendix.move) Appendix.move = true;
     else Appendix.hiding = !Appendix.hiding;
@@ -216,7 +216,7 @@ public class LobbyTools : MonoBehaviour
     // Hide confirmations.
     for(int index = 0; index < 4; index ++)
     {
-      Slide Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
+      var Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
       
       if(!Confirm.move)
       {
@@ -237,7 +237,7 @@ public class LobbyTools : MonoBehaviour
   public void PressPlay(int index)
   {
     GameObject Input = GameObject.Find($"Input{index}");
-    InputField Field = Input.GetComponent<InputField>();
+    var Field = Input.GetComponent<InputField>();
 
     if(Tools.DirExists($"Saves/Save{index}"))
     {
@@ -264,7 +264,7 @@ public class LobbyTools : MonoBehaviour
     }
     else
     {
-      NameWarningGlow Warning = GameObject.Find("NameWarning").GetComponent<NameWarningGlow>();
+      var Warning = GameObject.Find("NameWarning").GetComponent<NameWarningGlow>();
 
       Warning.index = index;
       Warning.alpha = 1; 
@@ -297,7 +297,7 @@ public class LobbyTools : MonoBehaviour
     // Move confirmations.
     for(int index = 0; index < 4; index ++)
     {
-      Slide Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
+      var Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
 
       // Pressed erase.
       if(number == index)
