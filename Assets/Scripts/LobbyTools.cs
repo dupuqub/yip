@@ -355,7 +355,7 @@ public class LobbyTools : MonoBehaviour
     }
 
     // Navigate.
-    if(letter == "S") Tools.UISelect($"No{number}");
+    else if(letter == "S") Tools.UISelect($"No{number}");
     else Tools.UISelect($"Play{number}");
 
     // Move confirmations.
@@ -363,14 +363,14 @@ public class LobbyTools : MonoBehaviour
     {
       var Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
 
-      // Pressed erase.
+      // Pressed confirm.
       if(number == index)
       {
         if(!Confirm.move) Confirm.move = true;
         else Confirm.hiding = letter == "S";
       }
 
-      // Other erases.
+      // Other confirms.
       else if(!Confirm.move)
       {
         if(!Confirm.hiding) Confirm.move = true;
