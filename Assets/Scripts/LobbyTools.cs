@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class LobbyTools : MonoBehaviour
 {
@@ -241,7 +242,7 @@ public class LobbyTools : MonoBehaviour
 
     if(Tools.DirExists($"Saves/Save{index}"))
     {
-      Debug.Log($"Continue {index}");
+      SceneManager.LoadScene("Sketch");
     }
     else if(Field.text != "")
     {
@@ -260,7 +261,7 @@ public class LobbyTools : MonoBehaviour
       Tools.DirCreate(dirPath);
       Tools.FileCreate($"{dirPath}/Main.json", newSaveMain);
 
-      Debug.Log($"Start {index}");
+      SceneManager.LoadScene("Sketch");
     }
     else
     {
