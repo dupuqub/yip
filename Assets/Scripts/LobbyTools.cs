@@ -189,6 +189,8 @@ public class LobbyTools : MonoBehaviour
       GameObject.Find($"Input{index}").GetComponent<InputField>().interactable = false;
       GameObject.Find($"Play{index}").GetComponent<Button>().interactable = false;
       GameObject.Find($"Erase{index}").GetComponent<Button>().interactable = false;
+      GameObject.Find($"Yes{index}").GetComponent<Button>().interactable = false;
+      GameObject.Find($"No{index}").GetComponent<Button>().interactable = false;
     }
   }
 
@@ -211,8 +213,18 @@ public class LobbyTools : MonoBehaviour
 
       for(int index = 0; index < 4; index ++)
       {
+        // Saves
         yield return new WaitForSeconds(0.1f);
         GameObject.Find($"Save{index}").GetComponent<Slide>().move = true;
+
+        // Confirms.
+        var Confirm = GameObject.Find($"Confirm{index}").GetComponent<Slide>();
+
+        if(!Confirm.move)
+        {
+          if(!Confirm.hiding) Confirm.move = true;
+        }
+        else if(Confirm.hiding) Confirm.hiding = false;
       }
 
       yield return new WaitForSeconds(1f);

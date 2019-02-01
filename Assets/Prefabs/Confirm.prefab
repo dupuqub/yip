@@ -234,7 +234,7 @@ MonoBehaviour:
   delay: 0
   move: 0
   hiding: 0
-  hide: {x: 1760, y: 35, z: 0}
+  hide: {x: 1960, y: 35, z: 0}
   show: {x: 726, y: 35, z: 0}
 --- !u!1 &8953701597929324763
 GameObject:
