@@ -178,6 +178,52 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
+  public void DisableAll()
+  {
+    GameObject.Find("Language").GetComponent<Button>().interactable = false;
+    GameObject.Find("Settings").GetComponent<Button>().interactable = false;
+    GameObject.Find("Exit").GetComponent<Button>().interactable = false;
+
+    for(int index = 0; index < 4; index ++)
+    {
+      GameObject.Find($"Input{index}").GetComponent<InputField>().interactable = false;
+      GameObject.Find($"Play{index}").GetComponent<Button>().interactable = false;
+      GameObject.Find($"Erase{index}").GetComponent<Button>().interactable = false;
+    }
+  }
+
+  //....................................................................................................................
+  public void PlaySlide()
+  {
+    IEnumerator Routine()
+    {
+      GameObject.Find("Title").GetComponent<Slide>().move = true;
+      yield return new WaitForSeconds(0.2f);
+      GameObject.Find("Language").GetComponent<Slide>().move = true;
+      yield return new WaitForSeconds(0.1f);
+      GameObject.Find("Settings").GetComponent<Slide>().move = true;
+      yield return new WaitForSeconds(0.1f);
+      GameObject.Find("Exit").GetComponent<Slide>().move = true;
+      yield return new WaitForSeconds(0.3f);
+      GameObject.Find("PinkBox").GetComponent<Slide>().move = true;
+      yield return new WaitForSeconds(0.1f);
+      GameObject.Find("Question").GetComponent<Slide>().move = true;
+
+      for(int index = 0; index < 4; index ++)
+      {
+        yield return new WaitForSeconds(0.1f);
+        GameObject.Find($"Save{index}").GetComponent<Slide>().move = true;
+      }
+
+      yield return new WaitForSeconds(1f);
+      SceneManager.LoadScene("Sketch");
+    }
+
+    DisableAll();
+    StartCoroutine(Routine());
+  }
+
+  //....................................................................................................................
   public void PressLanguage()
   {
     string json_Common = Tools.FileRead("Sources/_Common.json");
@@ -240,10 +286,13 @@ public class LobbyTools : MonoBehaviour
     GameObject Input = GameObject.Find($"Input{index}");
     var Field = Input.GetComponent<InputField>();
 
+    // Continue game.
     if(Tools.DirExists($"Saves/Save{index}"))
     {
-      SceneManager.LoadScene("Sketch");
+      PlaySlide();
     }
+
+    // New game.
     else if(Field.text != "")
     {
       string dirPath = $"Saves/Save{index}";
@@ -261,8 +310,10 @@ public class LobbyTools : MonoBehaviour
       Tools.DirCreate(dirPath);
       Tools.FileCreate($"{dirPath}/Main.json", newSaveMain);
 
-      SceneManager.LoadScene("Sketch");
+      PlaySlide();
     }
+
+    // New game (empty name).
     else
     {
       var Warning = GameObject.Find("NameWarning").GetComponent<NameWarningGlow>();

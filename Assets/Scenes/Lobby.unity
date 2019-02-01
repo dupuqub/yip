@@ -276,7 +276,7 @@ MonoBehaviour:
   delay: 55
   move: 1
   hiding: 0
-  hide: {x: -1231, y: -328, z: 0}
+  hide: {x: -1431, y: -328, z: 0}
   show: {x: -652, y: -328, z: 0}
 --- !u!114 &85499540
 MonoBehaviour:
@@ -748,7 +748,7 @@ MonoBehaviour:
   delay: 60
   move: 1
   hiding: 0
-  hide: {x: -1194, y: -458, z: 0}
+  hide: {x: -1394, y: -458, z: 0}
   show: {x: -690, y: -458, z: 0}
 --- !u!114 &363540974
 MonoBehaviour:
@@ -946,7 +946,7 @@ MonoBehaviour:
   delay: 70
   move: 1
   hiding: 0
-  hide: {x: 1400, y: 294, z: 0}
+  hide: {x: 1600, y: 294, z: 0}
   show: {x: 520, y: 294, z: 0}
 --- !u!1001 &668738177
 PrefabInstance:
@@ -1541,7 +1541,7 @@ MonoBehaviour:
   delay: 50
   move: 1
   hiding: 0
-  hide: {x: -1268, y: -200, z: 0}
+  hide: {x: -1468, y: -200, z: 0}
   show: {x: -615, y: -200, z: 0}
 --- !u!114 &1343704647
 MonoBehaviour:
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   delay: 30
   move: 1
   hiding: 0
-  hide: {x: -1285, y: 220, z: 0}
+  hide: {x: -1485, y: 220, z: 0}
   show: {x: -540, y: 220, z: 0}
 --- !u!1001 &1736430085
 PrefabInstance:
@@ -3158,11 +3158,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8953701597408988645, guid: 845697c01ee91394d9057723199f0d2d,
-        type: 3}
-      propertyPath: m_UseSpriteMesh
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8953701599276376759, guid: 845697c01ee91394d9057723199f0d2d,
         type: 3}
       propertyPath: m_Name
@@ -3172,6 +3167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Yes0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8953701597408988645, guid: 845697c01ee91394d9057723199f0d2d,
+        type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 845697c01ee91394d9057723199f0d2d, type: 3}
