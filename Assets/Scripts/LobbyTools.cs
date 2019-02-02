@@ -195,6 +195,8 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
+  // No "coroutine-methods" can be static.
+
   public void PlaySlide()
   {
     IEnumerator Routine()
@@ -236,6 +238,8 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
+  // No "press-methods" can be static.
+
   public void PressLanguage()
   {
     string json_Common = Tools.FileRead("Sources/_Common.json");
