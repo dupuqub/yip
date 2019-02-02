@@ -359,7 +359,7 @@ public class LobbyTools : MonoBehaviour
     }
 
     // Navigate.
-    else if(letter == "S") Tools.UISelect($"No{number}");
+    if(letter == "S") Tools.UISelect($"No{number}");
     else Tools.UISelect($"Play{number}");
 
     // Move confirmations.
