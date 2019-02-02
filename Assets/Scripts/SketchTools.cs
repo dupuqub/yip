@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SketchTools : MonoBehaviour
 {
-  public void Lobby()
+  public void PressLobby()
   {
     SceneManager.LoadScene("Lobby");
   }

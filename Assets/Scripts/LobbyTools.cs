@@ -178,7 +178,7 @@ public class LobbyTools : MonoBehaviour
   }
 
   //....................................................................................................................
-  public void DisableAll()
+  public static void DisableAll()
   {
     GameObject.Find("Language").GetComponent<Button>().interactable = false;
     GameObject.Find("Settings").GetComponent<Button>().interactable = false;
